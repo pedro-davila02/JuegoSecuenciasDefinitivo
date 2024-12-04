@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F457EE92D0061EB000EB2B9 /* VariablesGlobales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F457EE82D0061EB000EB2B9 /* VariablesGlobales.swift */; };
 		7F8496102CF898B00035C25D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F84960F2CF898B00035C25D /* AppDelegate.swift */; };
 		7F8496122CF898B00035C25D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496112CF898B00035C25D /* SceneDelegate.swift */; };
-		7F8496142CF898B00035C25D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496132CF898B00035C25D /* ViewController.swift */; };
+		7F8496142CF898B00035C25D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496132CF898B00035C25D /* MainViewController.swift */; };
 		7F8496172CF898B10035C25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8496152CF898B10035C25D /* Main.storyboard */; };
 		7F8496192CF898B20035C25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F8496182CF898B20035C25D /* Assets.xcassets */; };
 		7F84961C2CF898B20035C25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F84961A2CF898B20035C25D /* LaunchScreen.storyboard */; };
 		7F8496272CF898B30035C25D /* JuegoDeSecuenciasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496262CF898B30035C25D /* JuegoDeSecuenciasTests.swift */; };
 		7F8496312CF898B30035C25D /* JuegoDeSecuenciasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496302CF898B30035C25D /* JuegoDeSecuenciasUITests.swift */; };
 		7F8496332CF898B30035C25D /* JuegoDeSecuenciasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496322CF898B30035C25D /* JuegoDeSecuenciasUITestsLaunchTests.swift */; };
+		7F8496402CF899180035C25D /* JuegoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F84963F2CF899180035C25D /* JuegoViewController.swift */; };
+		7F8496422CF899270035C25D /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496412CF899270035C25D /* Usuario.swift */; };
+		7F8496442CF8993B0035C25D /* PuntuacionesLocalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496432CF8993B0035C25D /* PuntuacionesLocalesViewController.swift */; };
+		7F8496462CF899520035C25D /* PuntuacionesOnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8496452CF899520035C25D /* PuntuacionesOnlineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F457EE82D0061EB000EB2B9 /* VariablesGlobales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariablesGlobales.swift; sourceTree = "<group>"; };
 		7F84960C2CF898B00035C25D /* JuegoDeSecuencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuegoDeSecuencias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F84960F2CF898B00035C25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F8496112CF898B00035C25D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F8496132CF898B00035C25D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F8496132CF898B00035C25D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7F8496162CF898B10035C25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F8496182CF898B20035C25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F84961B2CF898B20035C25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		7F84962C2CF898B30035C25D /* JuegoDeSecuenciasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuegoDeSecuenciasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8496302CF898B30035C25D /* JuegoDeSecuenciasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoDeSecuenciasUITests.swift; sourceTree = "<group>"; };
 		7F8496322CF898B30035C25D /* JuegoDeSecuenciasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoDeSecuenciasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F84963F2CF899180035C25D /* JuegoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoViewController.swift; sourceTree = "<group>"; };
+		7F8496412CF899270035C25D /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		7F8496432CF8993B0035C25D /* PuntuacionesLocalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntuacionesLocalesViewController.swift; sourceTree = "<group>"; };
+		7F8496452CF899520035C25D /* PuntuacionesOnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuntuacionesOnlineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,16 @@
 			children = (
 				7F84960F2CF898B00035C25D /* AppDelegate.swift */,
 				7F8496112CF898B00035C25D /* SceneDelegate.swift */,
-				7F8496132CF898B00035C25D /* ViewController.swift */,
+				7F8496132CF898B00035C25D /* MainViewController.swift */,
 				7F8496152CF898B10035C25D /* Main.storyboard */,
 				7F8496182CF898B20035C25D /* Assets.xcassets */,
 				7F84961A2CF898B20035C25D /* LaunchScreen.storyboard */,
 				7F84961D2CF898B20035C25D /* Info.plist */,
+				7F84963F2CF899180035C25D /* JuegoViewController.swift */,
+				7F8496412CF899270035C25D /* Usuario.swift */,
+				7F8496432CF8993B0035C25D /* PuntuacionesLocalesViewController.swift */,
+				7F8496452CF899520035C25D /* PuntuacionesOnlineViewController.swift */,
+				7F457EE82D0061EB000EB2B9 /* VariablesGlobales.swift */,
 			);
 			path = JuegoDeSecuencias;
 			sourceTree = "<group>";
@@ -258,8 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F8496142CF898B00035C25D /* ViewController.swift in Sources */,
+				7F8496142CF898B00035C25D /* MainViewController.swift in Sources */,
+				7F8496402CF899180035C25D /* JuegoViewController.swift in Sources */,
+				7F8496442CF8993B0035C25D /* PuntuacionesLocalesViewController.swift in Sources */,
 				7F8496102CF898B00035C25D /* AppDelegate.swift in Sources */,
+				7F457EE92D0061EB000EB2B9 /* VariablesGlobales.swift in Sources */,
+				7F8496422CF899270035C25D /* Usuario.swift in Sources */,
+				7F8496462CF899520035C25D /* PuntuacionesOnlineViewController.swift in Sources */,
 				7F8496122CF898B00035C25D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

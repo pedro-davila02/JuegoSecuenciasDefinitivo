@@ -1,24 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="JuegoDeSecuencias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juego De Secuencias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fik-qB-2bI">
+                                <rect key="frame" x="114" y="114" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9g-I4-P5W">
+                                <rect key="frame" x="122.33333333333333" y="179" width="148.33333333333337" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="escribirNombre:" destination="BYZ-38-t0r" eventType="editingChanged" id="7Jm-yF-wtp"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BU-zc-hJq">
+                                <rect key="frame" x="166" y="680" width="61.333333333333343" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="startPulsado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KoU-yX-y3l"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PBn-a3-qoD">
+                                <rect key="frame" x="121.66666666666669" y="232" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7Lr-p8-vGD"/>
+                                    <constraint firstAttribute="width" constant="150" id="zqV-r8-9bv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbd-Nr-2uD">
+                                <rect key="frame" x="121.66666666666669" y="454" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0zP-KJ-msm"/>
+                                    <constraint firstAttribute="height" constant="150" id="EwG-SA-Ss4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fik-qB-2bI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Tp-Vj-Rk2"/>
+                            <constraint firstItem="wbd-Nr-2uD" firstAttribute="top" secondItem="PBn-a3-qoD" secondAttribute="bottom" constant="72" id="PbB-Qx-6Gc"/>
+                            <constraint firstItem="Y9g-I4-P5W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tsg-mA-SnO"/>
+                            <constraint firstItem="PBn-a3-qoD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3j-T6-egC"/>
+                            <constraint firstItem="Y9g-I4-P5W" firstAttribute="top" secondItem="fik-qB-2bI" secondAttribute="bottom" constant="44" id="lc0-fC-2W6"/>
+                            <constraint firstItem="fik-qB-2bI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="nrJ-g0-1g5"/>
+                            <constraint firstItem="1BU-zc-hJq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qKi-Os-yc5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1BU-zc-hJq" secondAttribute="bottom" constant="103" id="vex-aw-WFB"/>
+                            <constraint firstItem="wbd-Nr-2uD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yRK-Ei-Vc1"/>
+                            <constraint firstItem="wbd-Nr-2uD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="103" id="ydV-MG-y03"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="botonStart" destination="1BU-zc-hJq" id="Eat-bU-kkC"/>
+                        <outlet property="imagenCereza" destination="PBn-a3-qoD" id="0vs-PA-Ao7"/>
+                        <outlet property="imagenMango" destination="wbd-Nr-2uD" id="gXe-0U-ClX"/>
+                        <outlet property="ingresarNombre" destination="Y9g-I4-P5W" id="UOu-TX-AQB"/>
+                        <segue destination="xwP-jb-7kV" kind="presentation" identifier="toJuego" modalPresentationStyle="fullScreen" id="gYP-KV-woj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1182" y="-6"/>
+        </scene>
+        <!--Juego View Controller-->
+        <scene sceneID="RkW-0I-mFZ">
+            <objects>
+                <viewController id="xwP-jb-7kV" customClass="JuegoViewController" customModule="JuegoDeSecuencias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwC-8F-hmv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMd-cn-KDq">
+                                <rect key="frame" x="118.00000000000001" y="768" width="157.33333333333337" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ver Puntuaciones"/>
+                                <connections>
+                                    <action selector="verPuntuacionPulsado:" destination="xwP-jb-7kV" eventType="touchUpInside" id="alN-na-tbx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuV-Wv-aVR" userLabel="Boton Manzana">
+                                <rect key="frame" x="-285" y="602" width="963" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="hav-6Q-CLH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="manzana" title="img4"/>
+                                <connections>
+                                    <action selector="botonSeleccionado:" destination="xwP-jb-7kV" eventType="touchUpInside" id="POB-oG-iSJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so2-yJ-fye" userLabel="Boton Cereza">
+                                <rect key="frame" x="122.66666666666669" y="81" width="148" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="QrW-it-Feg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cereza"/>
+                                <connections>
+                                    <action selector="botonSeleccionado:" destination="xwP-jb-7kV" eventType="touchUpInside" id="3H6-yO-0LF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQg-4C-JVD" userLabel="Boton Mango">
+                                <rect key="frame" x="122.66666666666669" y="223" width="148" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="esE-SS-nGc"/>
+                                    <constraint firstAttribute="width" constant="148" id="m4N-AC-GNZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mango"/>
+                                <connections>
+                                    <action selector="botonSeleccionado:" destination="xwP-jb-7kV" eventType="touchUpInside" id="9sR-9e-QpF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcm-ZF-jFB" userLabel="Boton ManzanaVerde">
+                                <rect key="frame" x="-346.66666666666669" y="447" width="1086.3333333333333" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="TUL-pH-vUc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="manzana_verde" title="img3"/>
+                                <connections>
+                                    <action selector="botonSeleccionado:" destination="xwP-jb-7kV" eventType="touchUpInside" id="PEv-wb-Lkp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zfx-tF-7zH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zfx-tF-7zH" firstAttribute="bottom" secondItem="NMd-cn-KDq" secondAttribute="bottom" constant="49" id="8eK-Gm-gZd"/>
+                            <constraint firstItem="Wcm-ZF-jFB" firstAttribute="centerX" secondItem="gwC-8F-hmv" secondAttribute="centerX" id="Dn9-1d-aHM"/>
+                            <constraint firstItem="ZuV-Wv-aVR" firstAttribute="top" secondItem="Wcm-ZF-jFB" secondAttribute="bottom" constant="5" id="JqG-WR-jKu"/>
+                            <constraint firstItem="uQg-4C-JVD" firstAttribute="top" secondItem="so2-yJ-fye" secondAttribute="bottom" constant="5" id="O1s-9M-hQl"/>
+                            <constraint firstItem="uQg-4C-JVD" firstAttribute="centerX" secondItem="gwC-8F-hmv" secondAttribute="centerX" id="Tbv-zd-D8C"/>
+                            <constraint firstItem="so2-yJ-fye" firstAttribute="centerX" secondItem="gwC-8F-hmv" secondAttribute="centerX" id="aa4-Zt-JNL"/>
+                            <constraint firstItem="ZuV-Wv-aVR" firstAttribute="centerX" secondItem="gwC-8F-hmv" secondAttribute="centerX" id="cY7-1V-77A"/>
+                            <constraint firstItem="so2-yJ-fye" firstAttribute="top" secondItem="Zfx-tF-7zH" secondAttribute="top" constant="81" id="fKj-0f-e4Y"/>
+                            <constraint firstAttribute="bottom" secondItem="ZuV-Wv-aVR" secondAttribute="bottom" constant="100" id="jZ0-Od-ruY"/>
+                            <constraint firstItem="NMd-cn-KDq" firstAttribute="centerX" secondItem="gwC-8F-hmv" secondAttribute="centerX" id="vu0-NA-rYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botonImg1" destination="so2-yJ-fye" id="xwf-N2-ngE"/>
+                        <outlet property="botonImg2" destination="uQg-4C-JVD" id="j87-DE-Fha"/>
+                        <outlet property="botonImg3" destination="Wcm-ZF-jFB" id="pvb-js-mnb"/>
+                        <outlet property="botonImg4" destination="ZuV-Wv-aVR" id="VBM-1m-NuF"/>
+                        <outlet property="verPuntuacionesLocales" destination="NMd-cn-KDq" id="ng6-qj-osR"/>
+                        <segue destination="n04-aX-5ry" kind="presentation" identifier="toPuntuacionesLocales" modalPresentationStyle="fullScreen" id="YhA-w2-CNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXH-NP-Ba2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385.49618320610688" y="-6.3380281690140849"/>
+        </scene>
+        <!--Puntuacion Locales View Controller-->
+        <scene sceneID="Baj-7V-y4B">
+            <objects>
+                <viewController id="n04-aX-5ry" customClass="PuntuacionLocalesViewController" customModule="JuegoDeSecuencias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X77-5d-f9V">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-xA-dzB">
+                                <rect key="frame" x="91" y="695" width="211" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ver Puntuaciones Online"/>
+                                <connections>
+                                    <action selector="verPuntuacionesOnline:" destination="n04-aX-5ry" eventType="touchUpInside" id="DXq-3H-cwl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qz-Yj-wFa">
+                                <rect key="frame" x="91" y="606" width="211" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Publicar Puntuacion"/>
+                                <connections>
+                                    <action selector="publicarPuntuacion:" destination="n04-aX-5ry" eventType="touchUpInside" id="pd4-ck-LzB"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tablaPutuaciones" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-fb-ghH">
+                                <rect key="frame" x="55" y="125" width="279" height="366"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IdCelda" id="JIY-WI-3FQ">
+                                        <rect key="frame" x="0.0" y="50" width="279" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JIY-WI-3FQ" id="vEV-kF-Sbq">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado Actual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaN-F1-cdz">
+                                <rect key="frame" x="55" y="85" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oSX-Ke-wbv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eWc-fb-ghH" firstAttribute="centerX" secondItem="X77-5d-f9V" secondAttribute="centerX" constant="-2" id="44v-aZ-yl5"/>
+                            <constraint firstItem="EaN-F1-cdz" firstAttribute="top" secondItem="oSX-Ke-wbv" secondAttribute="top" constant="85" id="4tC-Cq-dPU"/>
+                            <constraint firstItem="eWc-fb-ghH" firstAttribute="centerY" secondItem="X77-5d-f9V" secondAttribute="centerY" constant="-118" id="5I8-xw-aE3"/>
+                            <constraint firstItem="EaN-F1-cdz" firstAttribute="leading" secondItem="oSX-Ke-wbv" secondAttribute="leading" constant="55" id="9a0-5f-mba"/>
+                            <constraint firstItem="NMD-xA-dzB" firstAttribute="centerX" secondItem="X77-5d-f9V" secondAttribute="centerX" id="N5o-lB-NTn"/>
+                            <constraint firstItem="NMD-xA-dzB" firstAttribute="top" secondItem="5qz-Yj-wFa" secondAttribute="bottom" constant="54" id="ctk-V5-qqs"/>
+                            <constraint firstItem="eWc-fb-ghH" firstAttribute="top" secondItem="oSX-Ke-wbv" secondAttribute="top" constant="125" id="iuU-v0-YvI"/>
+                            <constraint firstItem="5qz-Yj-wFa" firstAttribute="leading" secondItem="oSX-Ke-wbv" secondAttribute="leading" constant="91" id="ntR-e1-kdO"/>
+                            <constraint firstItem="5qz-Yj-wFa" firstAttribute="centerX" secondItem="X77-5d-f9V" secondAttribute="centerX" id="o0d-Em-RVD"/>
+                            <constraint firstItem="oSX-Ke-wbv" firstAttribute="bottom" secondItem="NMD-xA-dzB" secondAttribute="bottom" constant="122" id="oM9-jk-y5F"/>
+                            <constraint firstItem="EaN-F1-cdz" firstAttribute="centerX" secondItem="X77-5d-f9V" secondAttribute="centerX" constant="-77" id="wo0-cV-wKk"/>
+                            <constraint firstItem="eWc-fb-ghH" firstAttribute="leading" secondItem="oSX-Ke-wbv" secondAttribute="leading" constant="55" id="x9K-bn-Z2b"/>
+                            <constraint firstItem="oSX-Ke-wbv" firstAttribute="trailing" secondItem="NMD-xA-dzB" secondAttribute="trailing" constant="91" id="y3h-MK-GP9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="publicarPuntuacion" destination="5qz-Yj-wFa" id="P00-gO-k5M"/>
+                        <outlet property="resultadoActual" destination="EaN-F1-cdz" id="BJu-AY-p4I"/>
+                        <outlet property="tablaPuntuaciones" destination="eWc-fb-ghH" id="MXi-Wp-ZeH"/>
+                        <segue destination="3XW-Ok-UgQ" kind="presentation" identifier="toPuntuacionesOnline" modalPresentationStyle="fullScreen" id="H2B-zp-qNO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TjZ-KH-AQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387.02290076335879" y="-6.3380281690140849"/>
+        </scene>
+        <!--Puntuaciones Online View Controller-->
+        <scene sceneID="Sri-GF-1Nd">
+            <objects>
+                <viewController id="3XW-Ok-UgQ" customClass="PuntuacionesOnlineViewController" customModule="JuegoDeSecuencias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPo-eX-GqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-ea-0NR">
+                                <rect key="frame" x="26" y="59" width="342" height="742"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="onlineScoreCell" id="evh-hA-tbp">
+                                        <rect key="frame" x="0.0" y="50" width="342" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="evh-hA-tbp" id="Oh7-IR-0kg">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iQj-AV-ChR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tablaPuntuacionesOnline" destination="gdu-ea-0NR" id="hDj-4D-dV1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exy-fo-VB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156.4885496183206" y="-6.3380281690140849"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cereza" width="124" height="120"/>
+        <image name="mango" width="124" height="109"/>
+        <image name="manzana" width="900" height="720"/>
+        <image name="manzana_verde" width="1024" height="930"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
